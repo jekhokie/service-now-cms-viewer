@@ -3,3 +3,5 @@
 /log/*.log
 /tmp
 config/settings.yml
+*.swp
+*.swo
