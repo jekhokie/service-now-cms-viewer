@@ -25,6 +25,14 @@
         </ul>
       </li>
 
+      <li id="style-sheets-folder" class="folder">Style Sheets
+        <ul>
+          <% @style_sheets.each do |style_sheet| %>
+            <li id="<%= style_sheet["sys_id"] %>"><%= raw(link_to style_sheet["name"], style_sheet_path(style_sheet["sys_id"]), :remote => true) %>
+          <% end %>
+        </ul>
+      </li>
+
       <li id="blocks-folder" class="folder">Blocks
         <ul>
           <li id="blocks-headers-folder" class="folder">Headers
