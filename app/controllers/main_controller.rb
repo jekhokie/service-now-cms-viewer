@@ -7,6 +7,7 @@ class MainController < ApplicationController
     @themes       = ServiceNowApi.table_request('content_theme', 'sysparm_query=ORDERBYname&sysparm_fields=name,sys_id')
     @style_sheets = ServiceNowApi.table_request('content_css',   'sysparm_query=ORDERBYname&sysparm_fields=name,sys_id')
     @macros       = ServiceNowApi.table_request('sys_ui_macro',  'sysparm_query=ORDERBYname&sysparm_fields=name,sys_id,category')
+    @image_datas  = ServiceNowApi.table_request('db_image',      'sysparm_query=ORDERBYname&sysparm_fields=name,sys_id')
 
     # macro content
     @layouts = @macros.select{ |macro| macro["category"] == "layout" }

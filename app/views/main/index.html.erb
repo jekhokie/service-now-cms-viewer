@@ -108,6 +108,14 @@
           </li>
         </ul>
       </li>
+
+      <li id="images-folder" class="folder">Images
+        <ul>
+          <% @image_datas.each do |image_data| %>
+            <li id="<%= image_data["sys_id"] %>"><%= raw(link_to image_data["name"], image_data_path(image_data["sys_id"]), :remote => true) %>
+          <% end %>
+        </ul>
+      </li>
     </ul>
   </div>
 <% end %>

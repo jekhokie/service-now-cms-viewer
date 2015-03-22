@@ -8,4 +8,5 @@ ServiceNowCmsViewer::Application.routes.draw do
   resources :layouts,        :only => [ :show ]
   resources :style_sheets,   :only => [ :show ]
   resources :content_blocks, :only => [ :show ]
+  resources :image_datas,    :only => [ :show ]
 end
