@@ -1,0 +1,18 @@
+<h1 class="<%= record_name %>-header page-header"><%= record_name.titleize %> Info:</h1>
+
+<div class="<%= record_name %>-info">
+  <form class="form-horizontal">
+    <% record.each do |key, val| %>
+      <div class="form-group">
+        <%= label_tag key, "#{key}:", :class => "control-label col-sm-2" %>
+        <div class="col-sm-8">
+          <% if val.is_a?(Hash) %>
+            <%= text_field_tag key, val["value"], :class => "form-control", :disabled => true %>
+          <% else %>
+            <%= text_field_tag key, val, :class => "form-control", :disabled => true %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </form>
+</div>

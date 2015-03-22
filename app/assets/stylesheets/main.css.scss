@@ -1,0 +1,19 @@
+body {
+  div.sidebar {
+    margin-top: 12px;
+
+    div#tree {
+      ul.ui-fancytree {
+        min-height: 600px;
+      }
+    }
+  }
+
+  div.main {
+    margin-left: 0px;
+
+    .page-header {
+      margin-top: 12px;
+    }
+  }
+}

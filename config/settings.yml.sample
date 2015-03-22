@@ -1,0 +1,6 @@
+service_now_endpoint:
+  protocol: "https"             # protocol cloud instance is listening on
+  host:     "<SERVICENOW_HOST>" # host cloud instance is listening on
+  port:     "443"               # port cloud instance is listening on
+  username: "<USERNAME>"        # username used to connect - must have role "rest_service" in ServiceNow
+  password: "<PASSWORD>"        # password for the corresponding REST user

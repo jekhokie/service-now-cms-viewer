@@ -1,0 +1,21 @@
+<% content_for :sidebar_content do %>
+  <div id="tree">
+    <ul id="tree-data" style="display: none;">
+      <li id="sites-folder" class="folder">Sites
+        <ul>
+          <% @sites.each do |site| %>
+            <li id="<%= site["sys_id"] %>"><%= raw(link_to site["name"], site_path(site["sys_id"]), :remote => true) %>
+          <% end %>
+        </ul>
+      </li>
+
+      <li id="pages-folder" class="folder">Pages
+        <ul>
+          <% @pages.each do |page| %>
+            <li id="<%= page["sys_id"] %>"><%= raw(link_to page["name"], page_path(page["sys_id"]), :remote => true) %>
+          <% end %>
+        </ul>
+      </li>
+    </ul>
+  </div>
+<% end %>
