@@ -3,5 +3,6 @@ ServiceNowCmsViewer::Application.routes.draw do
 
   resources :sites,          :only => [ :show ]
   resources :pages,          :only => [ :show ]
+  resources :themes,         :only => [ :show ]
   resources :content_blocks, :only => [ :show ]
 end
