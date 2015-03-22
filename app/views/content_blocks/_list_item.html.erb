@@ -1,0 +1,3 @@
+<li id="<%= block["sys_id"] %>"><%= raw(link_to block["name"], content_block_path(block["sys_id"],
+                                                                  { :table => block["sys_class_name"],
+                                                                    :name  => name }), :remote => true) %>

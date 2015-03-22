@@ -16,6 +16,66 @@
           <% end %>
         </ul>
       </li>
+
+      <li id="blocks-folder" class="folder">Blocks
+        <ul>
+          <li id="blocks-headers-folder" class="folder">Headers
+            <ul>
+              <% @header_blocks.each do |block| %>
+                <%= render :partial => "content_blocks/list_item", :locals => { :block => block, :name => 'Header' } %>
+              <% end %>
+            </ul>
+          </li>
+
+          <li id="blocks-navs-folder" class="folder">Navigation Menus
+            <ul>
+              <% @menu_blocks.each do |block| %>
+                <%= render :partial => "content_blocks/list_item", :locals => { :block => block, :name => 'Navigation Menu' } %>
+              <% end %>
+            </ul>
+          </li>
+
+          <li id="blocks-dynamics-folder" class="folder">Dynamic
+            <ul>
+              <% @dynamic_blocks.each do |block| %>
+                <%= render :partial => "content_blocks/list_item", :locals => { :block => block, :name => 'Dynamic' } %>
+              <% end %>
+            </ul>
+          </li>
+
+          <li id="blocks-lists-folder" class="folder">Lists
+            <ul>
+              <% @list_blocks.each do |block| %>
+                <%= render :partial => "content_blocks/list_item", :locals => { :block => block, :name => 'List' } %>
+              <% end %>
+            </ul>
+          </li>
+
+          <li id="blocks-statics-folder" class="folder">Static HTML
+            <ul>
+              <% @static_blocks.each do |block| %>
+                <%= render :partial => "content_blocks/list_item", :locals => { :block => block, :name => 'Static HTML' } %>
+              <% end %>
+            </ul>
+          </li>
+
+          <li id="blocks-statics-folder" class="folder">Flash Movies
+            <ul>
+              <% @flash_blocks.each do |block| %>
+                <%= render :partial => "content_blocks/list_item", :locals => { :block => block, :name => 'Flash Movie' } %>
+              <% end %>
+            </ul>
+          </li>
+
+          <li id="blocks-statics-folder" class="folder">IFrames
+            <ul>
+              <% @iframe_blocks.each do |block| %>
+                <%= render :partial => "content_blocks/list_item", :locals => { :block => block, :name => 'IFrame' } %>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+      </li>
     </ul>
   </div>
 <% end %>
