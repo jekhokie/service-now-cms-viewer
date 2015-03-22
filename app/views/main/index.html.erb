@@ -17,6 +17,14 @@
         </ul>
       </li>
 
+      <li id="layouts-folder" class="folder">Layouts
+        <ul>
+          <% @layouts.each do |layout| %>
+            <li id="<%= layout["sys_id"] %>"><%= raw(link_to layout["name"], layout_path(layout["sys_id"]), :remote => true) %>
+          <% end %>
+        </ul>
+      </li>
+
       <li id="themes-folder" class="folder">Themes
         <ul>
           <% @themes.each do |theme| %>
