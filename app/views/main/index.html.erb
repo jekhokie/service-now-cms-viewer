@@ -25,6 +25,14 @@
         </ul>
       </li>
 
+      <li id="frames-folder" class="folder">Frames
+        <ul>
+          <% @frames.each do |frame| %>
+            <li id="<%= frame["sys_id"] %>"><%= raw(link_to frame["name"], frame_path(frame["sys_id"]), :remote => true) %>
+          <% end %>
+        </ul>
+      </li>
+
       <li id="themes-folder" class="folder">Themes
         <ul>
           <% @themes.each do |theme| %>

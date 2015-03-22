@@ -6,7 +6,11 @@ class MainController < ApplicationController
     @blocks       = ServiceNowApi.table_request('content_block', 'sysparm_query=ORDERBYname&sysparm_fields=name,sys_id,sys_class_name')
     @themes       = ServiceNowApi.table_request('content_theme', 'sysparm_query=ORDERBYname&sysparm_fields=name,sys_id')
     @style_sheets = ServiceNowApi.table_request('content_css',   'sysparm_query=ORDERBYname&sysparm_fields=name,sys_id')
-    @layouts      = ServiceNowApi.table_request('sys_ui_macro',  'sysparm_query=category=layout%5EORDERBYname&sysparm_fields=name,sys_id')
+    @macros       = ServiceNowApi.table_request('sys_ui_macro',  'sysparm_query=ORDERBYname&sysparm_fields=name,sys_id,category')
+
+    # macro content
+    @layouts = @macros.select{ |macro| macro["category"] == "layout" }
+    @frames  = @macros.select{ |macro| macro["category"] == "frame" }
 
     # normal block content
     @header_blocks  = @blocks.select{ |block| block["sys_class_name"] == "content_block_header"       }
