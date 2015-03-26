@@ -70,3 +70,7 @@ rails s
 ```bash
 http://<YOUR_SERVER_OR_IP>:3000/
 ```
+
+## Screenshots
+
+![ServiceNow CMS Viewer](img/viewer.png "CMS Viewer")
